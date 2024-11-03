@@ -1,0 +1,87 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="allure_bliss_shop.Master" %>
+<%-- Define the master page and link it to its code-behind file --%>
+
+<!DOCTYPE html>
+<html lang="en">
+<%-- Define the document type and language --%>
+
+<head>
+    <meta charset="UTF-8">
+    <%-- Specify the character encoding for the document --%>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <%-- Ensure the page is displayed correctly in older versions of Internet Explorer --%>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%-- Set the viewport to match the device's width and scale for responsive design --%>
+    <title>ADN Beauty</title>
+    <%-- Set the title of the web page --%>
+    <link rel="shortcut icon" href="img/logo1.png" type="image/x-icon">
+    <%-- Define the favicon for the website --%>
+    <link href='https://fonts.googleapis.com/css?family=Nova Flat' rel='stylesheet'>
+    <%-- Import a Google Font --%>
+    <link rel="stylesheet" href="css/style.css">
+    <%-- Link to the custom CSS stylesheet --%>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <%-- Link to Font Awesome for icons --%>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+        <%-- Define a form with a server-side ID --%>
+        <header>
+            <%-- Define the header section of the page --%>
+            <nav>
+                <%-- Define the navigation bar --%>
+                <a href="Home.aspx" class="logo">
+                    <%-- Link to the home page and style it as a logo --%>
+                    <img src="img/logo1.png">
+                    <%-- Display the logo image --%>
+                    <span>ADN Beauty</span>
+                    <%-- Display the name of the site --%>
+                </a>
+                <ul>
+                    <%-- Define a list for navigation links --%>
+                    <li id="HomeLink" runat="server">
+                        <%-- Define a list item with a server-side ID --%>
+                        <a href="Home.aspx" class="nav-link">Home</a>
+                        <%-- Link to the home page --%>
+                    </li>
+                    <li id="CartLink" runat="server">
+                        <%-- Define a list item with a server-side ID --%>
+                        <a href="shopCart.aspx" class="nav-link"><i class="fa fa-shopping-cart"></i></a>
+                        <%-- Link to the shopping cart page with a cart icon --%>
+                    </li>
+                    <li id="SignupLink" runat="server">
+                        <%-- Define a list item with a server-side ID --%>
+                        <a href="createAccount.aspx" class="nav-link">Signup</a>
+                        <%-- Link to the signup page --%>
+                    </li>
+                    <li id="LoginLink" runat="server">
+                        <%-- Define a list item with a server-side ID --%>
+                        <a href="Login.aspx" class="nav-link">Login</a>
+                        <%-- Link to the login page --%>
+                    </li>
+                    <li id="LogoutLink" runat="server">
+                        <%-- Define a list item with a server-side ID --%>
+                        <asp:LinkButton ID="LogoutLinkButton" runat="server" CssClass="nav-link" OnClick="LogoutLink_Click">Logout</asp:LinkButton>
+                        <%-- Define a server-side link button for logout with an event handler --%>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <%-- Define the main content area --%>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <%-- Placeholder for content from pages that use this master page --%>
+            </asp:ContentPlaceHolder>
+        </main>
+        <footer>
+            <%-- Define the footer section of the page --%>
+            <p>&copy; ADN Beauty | All rights reserved</p>
+            <%-- Display copyright information --%>
+        </footer>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <%-- Link to the jQuery library --%>
+</body>
+
+</html>
